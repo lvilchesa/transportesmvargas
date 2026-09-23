@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Nuestra Flota - Transportes M. Vargas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{margin:0;padding:0}.separator-turquoise{width:100%;height:4px;background:#008580}.header-container{min-height:130px}.logo-column{background:white;min-height:130px}.navbar-column{background:#c0c0c0;min-height:130px;position:relative}.navbar-column::before{content:'';position:absolute;top:0;left:0;right:-10vw;bottom:0;background-image:url('assets/img/navbar-background.png');background-size:cover;background-position:center;filter:grayscale(100%) brightness(2) contrast(0.7);opacity:0.7;z-index:0}.navbar-column>*{position:relative;z-index:1}.separator-gray{width:100%;height:5px;background:#4d4d4d}.contact-card{background:rgba(255,255,255,0.95);border-radius:15px;padding:40px;box-shadow:0 5px 20px rgba(0,0,0,0.15);border-top:4px solid #008580}.map-card{background:rgba(255,255,255,0.95);border-radius:15px;padding:15px;box-shadow:0 5px 20px rgba(0,0,0,0.15);border-top:4px solid #008580;overflow:hidden}.map-card iframe{border-radius:10px}.page-title{color:#008580;font-size:2.5rem;font-weight:300;margin-bottom:30px;padding-bottom:15px;border-bottom:3px solid #008580}.intro-text{font-size:1rem;line-height:1.7;color:#555;margin-bottom:40px}.gallery-container{position:relative}.gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-bottom:30px;min-height:400px}.gallery-item{position:relative;overflow:hidden;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s ease,box-shadow 0.3s ease;cursor:pointer;aspect-ratio:4/3;display:none}.gallery-item.active{display:block}.gallery-item:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(0,0,0,0.3)}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block}.pagination-controls{display:flex;justify-content:center;align-items:center;gap:15px;margin:30px 0}.pagination-btn{background:#008580;color:white;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;font-size:1rem;transition:background 0.3s}.pagination-btn:hover{background:#006d68}.pagination-btn:disabled{background:#ccc;cursor:not-allowed}.pagination-info{font-size:1rem;color:#555;font-weight:500}.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;justify-content:center;align-items:center}.lightbox.active{display:flex}.lightbox-content{position:relative;max-width:90%;max-height:90%}.lightbox-content img{width:100%;height:auto;max-height:90vh;object-fit:contain;border-radius:8px}.lightbox-close{position:absolute;top:20px;right:40px;font-size:40px;color:white;cursor:pointer;background:rgba(0,0,0,0.5);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s}.lightbox-close:hover{background:rgba(0,0,0,0.8)}.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);font-size:30px;color:white;cursor:pointer;background:rgba(0,0,0,0.5);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s;user-select:none}.lightbox-prev{left:40px}.lightbox-next{right:40px}.lightbox-prev:hover,.lightbox-next:hover{background:rgba(0,0,0,0.8)}.lightbox-counter{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:white;font-size:16px;background:rgba(0,0,0,0.5);padding:8px 16px;border-radius:20px}.navbar-toggle{display:none}@media (max-width:1240px){.gallery-grid{grid-template-columns:repeat(4,1fr)}.contact-card{padding:15px!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:15px!important;text-align:center!important}.contact-card>div:nth-child(3){grid-column:1 / -1!important;text-align:center!important}}@media (max-width:991px){.navbar-toggle{display:flex;flex-direction:column;justify-content:space-around;width:35px;height:30px;background:rgba(77,77,77,0.85);border:none;cursor:pointer;padding:5px;z-index:1001;margin:10px;border-radius:5px}.navbar-toggle span{width:100%;height:3px;background:white;border-radius:2px;transition:all 0.3s ease;display:block}.navbar-toggle.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}.navbar-toggle.active span:nth-child(2){opacity:0}.navbar-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}.main-navbar{position:relative;z-index:1001}.main-navbar ul{position:absolute;top:100%;right:0;flex-direction:column!important;background:#4d4d4d;width:250px;max-height:0;overflow:hidden;transition:max-height 0.3s ease;border-radius:0 0 15px 15px;z-index:1000}.main-navbar ul.active{max-height:400px}.main-navbar li{border-right:none!important;border-bottom:1px dotted rgba(255,255,255,0.3)!important;width:100%}.main-navbar li:last-child{border-bottom:none!important}.main-navbar a{padding:15px 20px!important;font-size:0.9rem!important;text-align:left;width:100%}.col-lg-1,.col-lg-3,.col-lg-7,.col-lg-10{flex:0 0 100%!important;max-width:100%!important}.offset-lg-1,.offset-lg-2{margin-left:0!important}.header-container .row{flex-direction:column}.header-container .col-lg-3{justify-content:center!important}.col-lg-1{display:none!important}.col-lg-10{padding:20px!important}.gallery-grid{grid-template-columns:repeat(3,1fr)}.page-title{font-size:2rem}.lightbox-prev,.lightbox-next{width:40px;height:40px;font-size:24px}.lightbox-prev{left:10px}.lightbox-next{right:10px}.lightbox-close{top:10px;right:10px;width:40px;height:40px;font-size:30px}}@media (max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}}@media (max-width:480px){.gallery-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="separator-turquoise"></div>
+    <div class="header-container">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-lg-3 offset-lg-1 logo-column d-flex align-items-center justify-content-end">
+                    <div style="padding: 20px;">
+                        <img src="assets/img/Logo.png" alt="Transportes M. Vargas" style="max-width: 100%; height: auto; max-height: 77px;">
+                    </div>
+                </div>
+                <div class="col-lg-7 navbar-column d-flex flex-column align-items-end justify-content-end" style="gap: 10px; padding: 0;">
+                    <nav class="main-navbar">
+                        <button class="navbar-toggle" id="navbarToggle"><span></span><span></span><span></span></button>
+                        <ul id="navbarMenu" style="list-style: none; display: flex; margin: 0; padding: 0; background: rgba(77, 77, 77, 0.85); border-radius: 0 0 15px 15px;">
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="index.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">INICIO</a></li>
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="quienes_somos.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">QUIENES SOMOS</a></li>
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="servicios.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">SERVICIOS</a></li>
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="nuestra_flota.html" class="active" style="color: #008580; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">NUESTRA FLOTA</a></li>
+                            <li style="margin: 0; padding: 0;"><a href="contacto.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+                    <a href="https://wa.me/56992993601" target="_blank" style="background: #008580; padding: 8px 18px; display: flex; align-items: center; border-radius: 15px 15px 0 0; text-decoration: none; color: white;">
+                        <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i>
+                        <span style="font-size: 2rem;">+56 9 92993601</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0"><div class="row g-0"><div class="col-12 separator-gray"></div></div></div>
+    <div id="contenido">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-lg-1" style="background: #93DAF2; height: 36px;"></div>
+                <div class="col-lg-10" style="background: #00B9B2; height: 36px; display: flex; align-items: center; padding: 8px 15px;">
+                    <span style="color: white; font-size: 0.9rem; font-weight: normal;">Está aquí: <a href="index.html" style="color: white; text-decoration: none;">Inicio</a> / Nuestra Flota</span>
+                </div>
+                <div class="col-lg-1" style="background: #9DE0DF; height: 36px;"></div>
+            </div>
+        </div>
+        <div class="container-fluid px-0" style="background: #93D9F1;">
+            <div class="row g-0">
+                <div class="col-lg-1" style="background: #93D9F1; min-height: 500px;"></div>
+                <div class="col-lg-10" style="background: white; min-height: 500px; padding: 40px;">
+                    <h1 class="page-title">NUESTRA FLOTA</h1>
+                    <div class="intro-text">
+                        <p>En Transportes MVargas disponemos de una amplia flota de vehículos totalmente equipados para transportar todo tipo de Cargas. Nuestra especialidad: transporte por Carreteras.</p>
+                    </div>
+                    <div class="gallery-container">
+                        <div class="gallery-grid" id="galleryGrid">
+                            <div class="gallery-item" data-page="0" data-index="0"><img src="assets/img/flota/flota_01.jpg" alt="Flota MVargas 1"></div>
+                            <div class="gallery-item" data-page="0" data-index="1"><img src="assets/img/flota/flota_02.jpg" alt="Flota MVargas 2"></div>
+                            <div class="gallery-item" data-page="0" data-index="2"><img src="assets/img/flota/flota_03.jpg" alt="Flota MVargas 3"></div>
+                            <div class="gallery-item" data-page="0" data-index="3"><img src="assets/img/flota/flota_04.jpg" alt="Flota MVargas 4"></div>
+                            <div class="gallery-item" data-page="0" data-index="4"><img src="assets/img/flota/flota_05.jpg" alt="Flota MVargas 5"></div>
+                            <div class="gallery-item" data-page="0" data-index="5"><img src="assets/img/flota/flota_06.jpg" alt="Flota MVargas 6"></div>
+                            <div class="gallery-item" data-page="0" data-index="6"><img src="assets/img/flota/flota_07.jpg" alt="Flota MVargas 7"></div>
+                            <div class="gallery-item" data-page="0" data-index="7"><img src="assets/img/flota/flota_08.jpg" alt="Flota MVargas 8"></div>
+                            <div class="gallery-item" data-page="0" data-index="8"><img src="assets/img/flota/flota_09.jpg" alt="Flota MVargas 9"></div>
+                            <div class="gallery-item" data-page="0" data-index="9"><img src="assets/img/flota/flota_10.jpg" alt="Flota MVargas 10"></div>
+                            <div class="gallery-item" data-page="0" data-index="10"><img src="assets/img/flota/flota_11.jpg" alt="Flota MVargas 11"></div>
+                            <div class="gallery-item" data-page="0" data-index="11"><img src="assets/img/flota/flota_12.jpg" alt="Flota MVargas 12"></div>
+                            <div class="gallery-item" data-page="0" data-index="12"><img src="assets/img/flota/flota_13.jpg" alt="Flota MVargas 13"></div>
+                            <div class="gallery-item" data-page="0" data-index="13"><img src="assets/img/flota/flota_14.jpg" alt="Flota MVargas 14"></div>
+                            <div class="gallery-item" data-page="0" data-index="14"><img src="assets/img/flota/flota_15.jpg" alt="Flota MVargas 15"></div>
+                            <div class="gallery-item" data-page="1" data-index="15"><img src="assets/img/flota/flota_16.jpg" alt="Flota MVargas 16"></div>
+                            <div class="gallery-item" data-page="1" data-index="16"><img src="assets/img/flota/flota_17.jpg" alt="Flota MVargas 17"></div>
+                            <div class="gallery-item" data-page="1" data-index="17"><img src="assets/img/flota/flota_18.jpg" alt="Flota MVargas 18"></div>
+                            <div class="gallery-item" data-page="1" data-index="18"><img src="assets/img/flota/flota_19.jpg" alt="Flota MVargas 19"></div>
+                            <div class="gallery-item" data-page="1" data-index="19"><img src="assets/img/flota/flota_20.jpg" alt="Flota MVargas 20"></div>
+                            <div class="gallery-item" data-page="1" data-index="20"><img src="assets/img/flota/flota_21.jpg" alt="Flota MVargas 21"></div>
+                            <div class="gallery-item" data-page="1" data-index="21"><img src="assets/img/flota/flota_22.jpg" alt="Flota MVargas 22"></div>
+                            <div class="gallery-item" data-page="1" data-index="22"><img src="assets/img/flota/flota_23.jpg" alt="Flota MVargas 23"></div>
+                            <div class="gallery-item" data-page="1" data-index="23"><img src="assets/img/flota/flota_24.jpg" alt="Flota MVargas 24"></div>
+                            <div class="gallery-item" data-page="1" data-index="24"><img src="assets/img/flota/flota_25.jpg" alt="Flota MVargas 25"></div>
+                            <div class="gallery-item" data-page="1" data-index="25"><img src="assets/img/flota/flota_26.jpg" alt="Flota MVargas 26"></div>
+                            <div class="gallery-item" data-page="1" data-index="26"><img src="assets/img/flota/flota_27.jpg" alt="Flota MVargas 27"></div>
+                            <div class="gallery-item" data-page="1" data-index="27"><img src="assets/img/flota/flota_28.jpg" alt="Flota MVargas 28"></div>
+                            <div class="gallery-item" data-page="1" data-index="28"><img src="assets/img/flota/flota_29.jpg" alt="Flota MVargas 29"></div>
+                            <div class="gallery-item" data-page="1" data-index="29"><img src="assets/img/flota/flota_30.jpg" alt="Flota MVargas 30"></div>
+                            <div class="gallery-item" data-page="2" data-index="30"><img src="assets/img/flota/flota_31.jpg" alt="Flota MVargas 31"></div>
+                            <div class="gallery-item" data-page="2" data-index="31"><img src="assets/img/flota/flota_32.jpg" alt="Flota MVargas 32"></div>
+                            <div class="gallery-item" data-page="2" data-index="32"><img src="assets/img/flota/flota_33.jpg" alt="Flota MVargas 33"></div>
+                            <div class="gallery-item" data-page="2" data-index="33"><img src="assets/img/flota/flota_34.jpg" alt="Flota MVargas 34"></div>
+                            <div class="gallery-item" data-page="2" data-index="34"><img src="assets/img/flota/flota_35.jpg" alt="Flota MVargas 35"></div>
+                        </div>
+                        <div class="pagination-controls">
+                            <button class="pagination-btn" id="prevPage">← Anterior</button>
+                            <span class="pagination-info" id="pageInfo">Página 1 de 3</span>
+                            <button class="pagination-btn" id="nextPage">Siguiente →</button>
+                        </div>
+                    </div>
+                    <div class="lightbox" id="lightbox">
+                        <span class="lightbox-close" id="lightboxClose">&times;</span>
+                        <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+                        <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+                        <div class="lightbox-content"><img id="lightboxImg" src="" alt="Vista ampliada"></div>
+                        <div class="lightbox-counter" id="lightboxCounter"></div>
+                    </div>
+                </div>
+                <div class="col-lg-1" style="background: #9DE0DF; min-height: 500px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0"><div class="row g-0"><div class="col-12" style="width: 100%; height: 4px; background: white;"></div></div></div>
+    <div class="container-fluid px-0" style="position: relative; min-height: 350px;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/img/fondos/carretera.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; filter: grayscale(100%) brightness(0.4); z-index: 0;"></div>
+        <div class="row g-0" style="position: relative; z-index: 1; min-height: 350px;">
+            <div class="col-lg-3 offset-lg-1" style="padding: 30px; display: flex; align-items: center;">
+                <div class="contact-card" style="width: 100%;">
+                    <div style="margin-bottom: 25px; text-align: center;">
+                        <h5 style="color: #008580; font-weight: bold; margin-bottom: 8px; font-size: 1rem;">Fono Contacto:</h5>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 5px;"></i><a href="tel:+56992993601" style="color: #008580; text-decoration: none;">(+56) 9 92993601</a></p>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><a href="tel:+56992922012" style="color: #008580; text-decoration: none;">+56 9 9292 2012</a></p>
+                    </div>
+                    <div style="margin-bottom: 25px; text-align: center;">
+                        <h5 style="color: #008580; font-weight: bold; margin-bottom: 8px; font-size: 1rem;">Ubicación:</h5>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem; line-height: 1.4;">Camino El Olivo Nº41,<br>Lote 4, Sitio 25<br>Maipú - Santiago</p>
+                    </div>
+                    <div style="margin-bottom: 0; text-align: center;">
+                        <h5 style="color: #008580; font-weight: bold; margin-bottom: 8px; font-size: 1rem;">Email:</h5>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><a href="mailto:mvargas@transportesmvargas.cl" style="color: #008580; text-decoration: none;">mvargas@transportesmvargas.cl</a></p>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><a href="mailto:tvargas@transportesmvargas.cl" style="color: #008580; text-decoration: none;">tvargas@transportesmvargas.cl</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" style="padding: 30px 30px 30px 0; display: flex; align-items: center;">
+                <div class="map-card" style="width: 100%; height: 100%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1660.9!2d-70.770222!3d-33.472361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDI4JzIwLjUiUyA3MMKwNDYnMTIuOCJX!5e1!3m2!1ses!2scl!4v1234567890" style="width: 100%; height: 100%; border: 0; min-height: 290px;" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0"><div class="row g-0"><div class="col-12" style="width: 100%; height: 4px; background: white;"></div></div></div>
+    <button id="backToTop" style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: rgba(0, 178, 169, 0.7); border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50%; color: white; font-size: 20px; cursor: pointer; display: none; align-items: center; justify-content: center; z-index: 1000; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);"><i class="fas fa-arrow-up"></i></button>
+    <script>
+const navbarToggle=document.querySelector('.navbar-toggle'),navbarMenu=document.querySelector('.main-navbar ul');if(navbarToggle&&navbarMenu){navbarToggle.addEventListener('click',function(){this.classList.toggle('active');navbarMenu.classList.toggle('active')});const navLinks=navbarMenu.querySelectorAll('a');navLinks.forEach(link=>{link.addEventListener('click',function(){navbarToggle.classList.remove('active');navbarMenu.classList.remove('active')})})}
+const backToTopButton=document.getElementById('backToTop');window.addEventListener('scroll',function(){backToTopButton.style.display=window.pageYOffset>300?'flex':'none'});backToTopButton.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+const galleryItems=document.querySelectorAll('.gallery-item'),prevPageBtn=document.getElementById('prevPage'),nextPageBtn=document.getElementById('nextPage'),pageInfo=document.getElementById('pageInfo');let currentPage=0;const totalPages=3;
+function showPage(page){galleryItems.forEach(item=>{item.classList.remove('active');if(parseInt(item.dataset.page)===page){item.classList.add('active')}});pageInfo.textContent=`Página ${page+1} de ${totalPages}`;prevPageBtn.disabled=page===0;nextPageBtn.disabled=page===totalPages-1}
+prevPageBtn.addEventListener('click',()=>{if(currentPage>0){currentPage--;showPage(currentPage);document.querySelector(".gallery-container").scrollIntoView({behavior:"smooth",block:"start"})}});
+nextPageBtn.addEventListener('click',()=>{if(currentPage<totalPages-1){currentPage++;showPage(currentPage);document.querySelector(".gallery-container").scrollIntoView({behavior:"smooth",block:"start"})}});
+showPage(currentPage);
+const lightbox=document.getElementById('lightbox'),lightboxImg=document.getElementById('lightboxImg'),lightboxClose=document.getElementById('lightboxClose'),lightboxPrev=document.getElementById('lightboxPrev'),lightboxNext=document.getElementById('lightboxNext'),lightboxCounter=document.getElementById('lightboxCounter');let currentIndex=0;
+galleryItems.forEach((item,index)=>{item.addEventListener('click',()=>{currentIndex=index;showLightbox()})});
+function showLightbox(){const imgSrc=galleryItems[currentIndex].querySelector('img').src;lightboxImg.src=imgSrc;lightboxCounter.textContent=`${currentIndex+1} / ${galleryItems.length}`;lightbox.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){lightbox.classList.remove('active');document.body.style.overflow='auto'}
+function showPrevImage(){currentIndex=(currentIndex-1+galleryItems.length)%galleryItems.length;showLightbox()}
+function showNextImage(){currentIndex=(currentIndex+1)%galleryItems.length;showLightbox()}
+lightboxClose.addEventListener('click',closeLightbox);lightboxPrev.addEventListener('click',showPrevImage);lightboxNext.addEventListener('click',showNextImage);
+lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)closeLightbox()});
+document.addEventListener('keydown',(e)=>{if(!lightbox.classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')showPrevImage();if(e.key==='ArrowRight')showNextImage()});
+    </script>
+</body>
+</html>

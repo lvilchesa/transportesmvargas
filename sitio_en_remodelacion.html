@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes M. Vargas - Sitio en Remodelación</title>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #F5FAD9 0%, #C2F8E6 30%, #E0F7F5 60%, #C2F8E6 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Top Separator */
+        .separator-turquoise {
+            width: 100%;
+            height: 6px;
+            background: #00b2a9;
+        }
+        
+        /* Logo Header Simple */
+        .simple-header {
+            background: white;
+            padding: 30px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .simple-header img {
+            max-width: 300px;
+            height: auto;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            background: #25D366;
+            padding: 12px 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-button:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .whatsapp-button i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        /* Separator after header */
+        .separator-gray {
+            width: 100%;
+            height: 5px;
+            background: #4d4d4d;
+        }
+        
+        /* Main Content Container */
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .construction-icon {
+            font-size: 7rem;
+            color: #00b2a9;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .construction-title {
+            color: #4d4d4d;
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .construction-subtitle {
+            color: #00b2a9;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+        
+        .construction-text {
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        /* Contact Info Box */
+        .contact-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 40px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 4px solid #00b2a9;
+            display: flex;
+            gap: 30px;
+            align-items: stretch;
+        }
+        
+        .contact-box-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-box h3 {
+            color: #00b2a9;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            text-align: left;
+        }
+        
+        .contact-map-container {
+            flex: 1;
+            min-width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .contact-map-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: 0;
+        }
+        
+        .contact-item {
+            padding: 15px 0;
+        }
+        
+        .contact-item h4 {
+            color: #00b2a9;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .contact-item p {
+            color: #555;
+            font-size: 1rem;
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        
+        .contact-item a {
+            color: #00b2a9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: #008580;
+            text-decoration: underline;
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: #00b2a9;
+        }
+        
+        .whatsapp-icon {
+            color: #25D366 !important;
+        }
+        
+        /* Separator before footer */
+        .separator-teal {
+            width: 100%;
+            height: 4px;
+            background: #008580;
+            margin-top: 60px;
+        }
+        
+        /* Simple Footer */
+        .simple-footer {
+            background: #4d4d4d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .simple-footer p {
+            margin: 5px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .simple-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .simple-header img {
+                max-width: 220px;
+            }
+            
+            .construction-icon {
+                font-size: 5rem;
+            }
+            
+            .construction-title {
+                font-size: 2.5rem;
+            }
+            
+            .construction-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .construction-text {
+                font-size: 1rem;
+            }
+            
+            .contact-box {
+                padding: 30px 25px;
+                flex-direction: column;
+            }
+            
+            .contact-map-container {
+                min-width: 100%;
+                min-height: 300px;
+            }
+            
+            .contact-box h3 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .simple-header img {
+                max-width: 180px;
+            }
+            
+            .construction-title {
+                font-size: 2rem;
+            }
+            
+            .construction-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .contact-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Separator -->
+    <div class="separator-turquoise"></div>
+
+    <!-- Simple Header with Logo -->
+    <div class="simple-header">
+        <img src="assets/img/Logo.png" alt="Transportes M. Vargas">
+        <a href="https://wa.me/56992993601" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+            <span>+56 9 92993601</span>
+        </a>
+    </div>
+
+    <!-- Gray Separator -->
+    <div class="separator-gray"></div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="construction-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        
+        <h1 class="construction-title">Sitio en Remodelación</h1>
+        <h2 class="construction-subtitle">Estamos renovando nuestra página web</h2>
+        
+        <p class="construction-text">
+            Actualmente estamos trabajando en mejoras para ofrecerle un mejor servicio. 
+            Disculpe las molestias ocasionadas. Mientras tanto, puede contactarnos directamente 
+            a través de los siguientes medios:
+        </p>
+        
+        <!-- Contact Information Box -->
+        <div class="contact-box">
+            <div class="contact-box-left">
+                <h3>Contáctenos</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h4><i class="fas fa-phone"></i> Teléfonos</h4>
+                        <p>
+                            <i class="fab fa-whatsapp whatsapp-icon"></i>
+                            <a href="https://wa.me/56992993601" target="_blank">+56 9 92993601</a>
+                        </p>
+                        <p><a href="tel:+56992922012">+56 9 9292 2012</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4><i class="fas fa-envelope"></i> Email</h4>
+                        <p><a href="mailto:mvargas@transportesmvargas.cl">mvargas@transportesmvargas.cl</a></p>
+                        <p><a href="mailto:tvargas@transportesmvargas.cl">tvargas@transportesmvargas.cl</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4><i class="fas fa-map-marker-alt"></i> Ubicación</h4>
+                        <p>
+                            Camino El Olivo Nº41<br>
+                            Lote 4, Sitio 25<br>
+                            Maipú - Santiago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1660.9!2d-70.770222!3d-33.472361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDI4JzIwLjUiUyA3MMKwNDYnMTIuOCJX!5e1!3m2!1ses!2scl!4v1234567890" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teal Separator -->
+    <div class="separator-teal"></div>
+
+    <!-- Simple Footer -->
+    <div class="simple-footer">
+        <p><strong>Transportes M. Vargas</strong> - 20 años de experiencia en transporte de carga</p>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </div>
+
+</body>
+</html>

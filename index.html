@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Transportes M. Vargas - Inicio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        html {
+            overflow-x: hidden;
+        }
+        
+        .separator-turquoise {
+            width: 100%;
+            height: 4px;
+            background: #008580;
+        }
+        
+        .header-container {
+            min-height: 130px;
+        }
+        
+        .logo-column {
+            background: white;
+            min-height: 130px;
+        }
+        
+        .navbar-column {
+            background: #c0c0c0;
+            min-height: 130px;
+            position: relative;
+        }
+
+        .navbar-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('assets/img/navbar-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: grayscale(100%) brightness(2) contrast(0.7);
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        .navbar-column > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .separator-gray {
+            width: 100%;
+            height: 5px;
+            background: #4d4d4d;
+        }
+        
+        .separator-teal {
+            width: 100%;
+            height: 3px;
+            background: #008580;
+        }
+        
+        /* Hero Slider */
+        .hero-slider {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        .carousel-item {
+            height: 450px;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            opacity: 0.8;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+        
+        .carousel-indicators {
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-indicators [data-bs-target] {
+            width: 15px !important;
+            height: 15px !important;
+            border-radius: 50% !important;
+            border: 2px solid white !important;
+            background-color: transparent !important;
+            opacity: 0.7 !important;
+        }
+        
+        .carousel-indicators .active {
+            background-color: white !important;
+            opacity: 1 !important;
+        }
+        
+        .carousel-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.4);
+            width: 0;
+            z-index: 10;
+            transition: none;
+        }
+        
+        .carousel-progress.active {
+            animation: progress 5s linear forwards;
+        }
+        
+        @keyframes progress {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        
+        /* Welcome Section */
+        .welcome-section {
+            background: linear-gradient(to right, #F5FAD9, #C2F8E6);
+            padding: 40px 0;
+        }
+        
+        .welcome-section h2 {
+            color: #4d4d4d;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+        
+        .welcome-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .info-box {
+            background: transparent;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        
+        .info-box h4 {
+            color: #00C2BA;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box ul li {
+            padding: 6px 0;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .info-box ul li:before {
+            content: "·";
+            color: #4d4d4d;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Gallery Slider */
+        .gallery-slider {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            background: white;
+        }
+        
+        .gallery-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 36s linear infinite;
+        }
+        
+        .gallery-item {
+            flex: 0 0 auto;
+            height: 200px;
+            width: 355px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Estilos para las cards del footer */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 4px solid #008580;
+        }
+        
+        .map-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 4px solid #008580;
+            overflow: hidden;
+        }
+        
+        .map-card iframe {
+            border-radius: 10px;
+        }
+        
+        /* === RESPONSIVE === */
+
+        /* Menú hamburguesa (oculto en desktop) */
+        .navbar-toggle {
+            display: none;
+        }
+
+        /* Media query para móviles */
+        @media (max-width: 991px) {
+            /* Mostrar botón hamburguesa */
+            .navbar-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 35px;
+                height: 30px;
+                background: rgba(77, 77, 77, 0.85);
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                z-index: 1001;
+                margin: 10px;
+                border-radius: 5px;
+            }
+            
+            .navbar-toggle span {
+                width: 100%;
+                height: 3px;
+                background: white;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+                display: block;
+            }
+            
+            .navbar-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+            
+            .navbar-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .navbar-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+            
+            /* Menú móvil */
+            .main-navbar {
+                position: relative;
+                z-index: 1001;
+            }
+            
+            .main-navbar ul {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                flex-direction: column !important;
+                background: #4d4d4d;
+                width: 250px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                border-radius: 0 0 15px 15px;
+                z-index: 1000;
+            }
+            
+            .main-navbar ul.active {
+                max-height: 400px;
+            }
+            
+            .main-navbar li {
+                border-right: none !important;
+                border-bottom: 1px dotted rgba(255, 255, 255, 0.3) !important;
+                width: 100%;
+            }
+            
+            .main-navbar li:last-child {
+                border-bottom: none !important;
+            }
+            
+            .main-navbar a {
+                padding: 15px 20px !important;
+                font-size: 0.9rem !important;
+                text-align: left;
+                width: 100%;
+            }
+            
+            /* Hero slider más pequeño en móvil */
+            .hero-slider,
+            .carousel-item {
+                height: 300px;
+            }
+            
+            /* Welcome section */
+            .welcome-section h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Footer horizontal en pantallas menores a 1240px */
+        @media (max-width: 1240px) {
+            /* AJUSTES FOOTER EN HORIZONTAL */
+            .contact-card {
+                padding: 15px !important;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 15px !important;
+                text-align: center !important;
+            }
+            
+            /* Email ocupa toda la fila inferior y centrado */
+            .contact-card > div:nth-child(3) {
+                grid-column: 1 / -1 !important;
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Separator -->
+    <div class="separator-turquoise"></div>
+
+    <!-- Header Structure -->
+    <div class="header-container">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <!-- Logo Column: offset-1, 3 columnas -->
+                <div class="col-lg-3 offset-lg-1 logo-column d-flex align-items-center justify-content-end">
+                    <div style="padding: 20px;">
+                        <img src="assets/img/Logo.png" alt="Transportes M. Vargas" style="max-width: 100%; height: auto; max-height: 77px;">
+                    </div>
+                </div>
+
+                <!-- Navbar Column: 7 columnas -->
+                <div class="col-lg-7 navbar-column d-flex flex-column align-items-end justify-content-end" style="gap: 10px; padding: 0;">
+                    <nav class="main-navbar">
+                        <button class="navbar-toggle" id="navbarToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul id="navbarMenu" style="list-style: none; display: flex; margin: 0; padding: 0; background: rgba(77, 77, 77, 0.85); border-radius: 0 0 15px 15px;">
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="index.html" class="active" style="color: #008580; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">INICIO</a></li>
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="quienes_somos.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">QUIENES SOMOS</a></li>
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="servicios.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">SERVICIOS</a></li>
+                            <li style="margin: 0; padding: 0; border-right: 1px dotted rgba(255, 255, 255, 0.3);"><a href="nuestra_flota.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">NUESTRA FLOTA</a></li>
+                            <li style="margin: 0; padding: 0;"><a href="contacto.html" style="color: white; text-decoration: none; padding: 18px 20px; display: block; font-size: 0.85rem;">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <a href="https://wa.me/56992993601" target="_blank" style="background: #008580; padding: 8px 18px; display: flex; align-items: center; border-radius: 15px 15px 0 0; text-decoration: none; color: white;">
+                        <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i>
+                        <span style="font-size: 2rem;">+56 9 92993601</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gray Separator -->
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-12 separator-gray"></div>
+        </div>
+    </div>
+
+    <!-- Hero Slider -->
+    <div id="heroCarousel" class="carousel slide carousel-fade hero-slider" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-progress" id="carouselProgress"></div>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/slider/slide_transport_001.jpg" alt="Flota de camiones">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/slider/slide_transport_002.jpg" alt="Camiones de carga">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/slider/slide_transport_003.jpg" alt="Transporte profesional">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Teal Separator -->
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-12 separator-teal"></div>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <h2>Bienvenidos a Transportes MVargas</h2>
+            <p>Contamos con una vasta experiencia de 20 años en el rubro de transportes de carga, con infraestructura de primer nivel trasladando cargas valoradas con comprobado Nivel de Servicio. Contamos además con todas las medidas de seguridad en el traslado, personal de muy buen trato con nuestros clientes y precios acordes al mercado en nuestras tarifas.</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h4>Nuestros Puntos de entrega:</h4>
+                        <ul>
+                            <li>Región Metropolitana todas sus comunas</li>
+                            <li>Zona Sur Hasta Puerto Montt</li>
+                            <li>Zona Norte hasta Arica</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h4>Nuestra Flota:</h4>
+                        <ul>
+                            <li>10 Camionetas - 1700 kg.</li>
+                            <li>12 Camiones entre 5000 kg y 10.000 kg</li>
+                            <li>06 Ramplas con capacidad hasta 28 Pallets. 25000 Kg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separator White -->
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-12" style="width: 100%; height: 4px; background: white;"></div>
+        </div>
+    </div>
+
+    <!-- Gallery Slider -->
+    <div class="gallery-slider">
+        <div class="gallery-track">
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_019.jpg" alt="Galería 1"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_020.jpg" alt="Galería 2"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_021.jpg" alt="Galería 3"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_022.jpg" alt="Galería 4"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_023.jpg" alt="Galería 5"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_024.jpg" alt="Galería 6"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_025.jpg" alt="Galería 7"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_026.jpg" alt="Galería 8"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_027.jpg" alt="Galería 9"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_028.jpg" alt="Galería 10"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_029.jpg" alt="Galería 11"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_030.jpg" alt="Galería 12"></div>
+            <!-- Duplicar para loop infinito -->
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_019.jpg" alt="Galería 1"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_020.jpg" alt="Galería 2"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_021.jpg" alt="Galería 3"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_022.jpg" alt="Galería 4"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_023.jpg" alt="Galería 5"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_024.jpg" alt="Galería 6"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_025.jpg" alt="Galería 7"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_026.jpg" alt="Galería 8"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_027.jpg" alt="Galería 9"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_028.jpg" alt="Galería 10"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_029.jpg" alt="Galería 11"></div>
+            <div class="gallery-item"><img src="assets/img/galeria/galeria_030.jpg" alt="Galería 12"></div>
+        </div>
+    </div>
+
+    <!-- Separator White -->
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-12" style="width: 100%; height: 4px; background: white;"></div>
+        </div>
+    </div>
+
+    <!-- Contact/Footer Section -->
+    <div class="container-fluid px-0" style="position: relative; min-height: 350px;">
+        <!-- Fondo en loop blanco y negro -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/img/fondos/carretera.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; filter: grayscale(100%) brightness(0.4); z-index: 0;"></div>
+        
+        <!-- Contenido -->
+        <div class="row g-0" style="position: relative; z-index: 1; min-height: 350px;">
+            <!-- Datos de contacto: col-3 offset-1 -->
+            <div class="col-lg-3 offset-lg-1" style="padding: 30px; display: flex; align-items: center;">
+                <div class="contact-card" style="width: 100%;">
+                    <div style="margin-bottom: 25px; text-align: center;">
+                        <h5 style="color: #008580; font-weight: bold; margin-bottom: 8px; font-size: 1rem;">Fono Contacto:</h5>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 5px;"></i><a href="tel:+56992993601" style="color: #008580; text-decoration: none;">(+56) 9 92993601</a></p>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><a href="tel:+56992922012" style="color: #008580; text-decoration: none;">+56 9 9292 2012</a></p>
+                    </div>
+                    <div style="margin-bottom: 25px; text-align: center;">
+                        <h5 style="color: #008580; font-weight: bold; margin-bottom: 8px; font-size: 1rem;">Ubicación:</h5>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem; line-height: 1.4;">Camino El Olivo Nº41,<br>Lote 4, Sitio 25<br>Maipú - Santiago</p>
+                    </div>
+                    <div style="margin-bottom: 0; text-align: center;">
+                        <h5 style="color: #008580; font-weight: bold; margin-bottom: 8px; font-size: 1rem;">Email:</h5>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><a href="mailto:mvargas@transportesmvargas.cl" style="color: #008580; text-decoration: none;">mvargas@transportesmvargas.cl</a></p>
+                        <p style="color: #008580; margin: 3px 0; font-size: 0.85rem;"><a href="mailto:tvargas@transportesmvargas.cl" style="color: #008580; text-decoration: none;">tvargas@transportesmvargas.cl</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mapa: col-7 -->
+            <div class="col-lg-7" style="padding: 30px 30px 30px 0; display: flex; align-items: center;">
+                <div class="map-card" style="width: 100%; height: 100%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1660.9!2d-70.770222!3d-33.472361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDI4JzIwLjUiUyA3MMKwNDYnMTIuOCJX!5e1!3m2!1ses!2scl!4v1234567890" style="width: 100%; height: 100%; border: 0; min-height: 290px;" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Separator White -->
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-12" style="width: 100%; height: 4px; background: white;"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: rgba(0, 178, 169, 0.7); border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50%; color: white; font-size: 20px; cursor: pointer; display: none; align-items: center; justify-content: center; z-index: 1000; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Initialize Bootstrap Carousel
+        const carouselElement = document.getElementById('heroCarousel');
+        const progressBar = document.getElementById('carouselProgress');
+
+        const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: 5000,
+            wrap: true,
+            ride: 'carousel',
+            pause: false
+        });
+
+        // Función para reiniciar la barra de progreso
+        function resetProgressBar() {
+            progressBar.classList.remove('active');
+            void progressBar.offsetWidth; // Forzar reflow
+            progressBar.classList.add('active');
+        }
+
+        // Iniciar barra de progreso al cargar
+        resetProgressBar();
+
+        // Reiniciar barra cuando cambia de slide
+        carouselElement.addEventListener('slid.bs.carousel', function() {
+            resetProgressBar();
+        });
+
+        // Iniciar automáticamente
+        carousel.cycle();
+
+        // Menu hamburguesa toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+
+        if (navbarToggle && navbarMenu) {
+            navbarToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navbarMenu.classList.toggle('active');
+            });
+
+            const navLinks = navbarMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navbarToggle.classList.remove('active');
+                    navbarMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Mostrar/ocultar el botón según el scroll
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Scroll suave al top
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
